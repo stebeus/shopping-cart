@@ -1,7 +1,7 @@
 import { App } from './App.jsx';
 import { Cart } from './pages/Cart.jsx';
 import { Home } from './pages/Home.jsx';
-import { Shop } from './pages/Shop.jsx';
+import { Shop } from './pages/Shop/index.jsx';
 
 export const routes = [
   {
