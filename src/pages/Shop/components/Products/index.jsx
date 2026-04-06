@@ -1,13 +1,14 @@
 import './index.css';
 
-import { Card } from '@/pages/Shop/components/Card/index.jsx';
+import { useFetch } from '@/hooks/useFetch.js';
+import { createCard } from '@/pages/Shop/components/Card/index.jsx';
 
-export function Products({ size = 10 }) {
-  const createCard = () => (
-    <Card key={crypto.randomUUID()} title="placeholder" price={123} />
-  );
+export function Products() {
+  const apiUrl = 'https://fakestoreapi.com/products';
+  const [products, isLoading, error] = useFetch(apiUrl);
 
-  const products = Array.from({ length: size }, createCard);
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
 
-  return <div className="grid">{products}</div>;
+  return <div className="grid">{products.map(createCard)}</div>;
 }
