@@ -4,6 +4,11 @@ async function fetchData(url, ...[dataSetter, errorSetter, isLoadingSetter]) {
   try {
     const response = await fetch(url);
     const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`HTTP error: Status ${response.status}`);
+    }
+
     dataSetter(data);
   } catch (error) {
     errorSetter(error.message);
