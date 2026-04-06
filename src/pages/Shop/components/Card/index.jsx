@@ -2,9 +2,7 @@ import './index.css';
 
 import { Button } from '@/components/__ui__/Button.jsx';
 
-export function Card({ title, price, imgId }) {
-  const imgUrl = `https://i.imgur.com/${imgId}.jpeg`;
-
+function Card({ title, price, imgUrl }) {
   return (
     <article className="card">
       <img src={imgUrl} alt="" width={100} height={100} />
@@ -18,3 +16,7 @@ export function Card({ title, price, imgId }) {
     </article>
   );
 }
+
+export const createCard = ({ id, title, price, image }) => (
+  <Card key={id} title={title} price={price} imgUrl={image} />
+);
