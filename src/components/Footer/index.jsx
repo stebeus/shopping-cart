@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer>
       <p className="copyright">
-        © Stebeus 2025.{' '}
+        © Stebeus 2026.{' '}
         <ExternalLink to="https://opensource.org/license/mit">
           MIT License
         </ExternalLink>
