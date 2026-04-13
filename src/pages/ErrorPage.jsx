@@ -1,5 +1,7 @@
 import { Link, useRouteError } from 'react-router';
 
+import { ErrorMessage } from '@/components/ui/ErrorMessage.jsx';
+
 export function ErrorPage() {
   const error = useRouteError();
 
@@ -7,8 +9,10 @@ export function ErrorPage() {
 
   return (
     <>
-      <h2>{error.status ?? 'Error!'}</h2>
-      <p>{error.statusText ?? error.message}</p>
+      <ErrorMessage
+        title={error.status}
+        description={error.statusText ?? error.message}
+      />
       <Link to="/">Return to home</Link>
     </>
   );
