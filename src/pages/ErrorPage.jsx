@@ -7,7 +7,7 @@ export function ErrorPage() {
 
   return (
     <>
-      <h2>{error.status}</h2>
+      <h2>{error.status ?? 'Error!'}</h2>
       <p>{error.statusText ?? error.message}</p>
       <Link to="/">Return to home</Link>
     </>
