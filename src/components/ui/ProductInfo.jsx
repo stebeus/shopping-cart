@@ -1,4 +1,4 @@
-export function ProductInfo({ title, price, defaultQuantity, min = 0 }) {
+export function ProductInfo({ title, price, defaultQuantity = 1, min = 0 }) {
   return (
     <>
       <h3> {title}</h3>
