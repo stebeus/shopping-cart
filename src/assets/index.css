@@ -1,0 +1,38 @@
+:root {
+  /* Colors */
+  --color-base: oklch(1 0 0);
+  --color-baseSecondary: oklch(from var(--color-base) calc(l - 0.04) c h);
+  --color-content: oklch(0.16 0 0);
+  --color-contentMuted: oklch(from var(--color-content) calc(l + 0.26) c h);
+
+  /* Spacing */
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.25rem;
+  --space-xl: 1.5rem;
+  --space-xxl: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: oklch(0.22 0 0);
+    --color-content: oklch(0.96 0 0);
+    --color-contentMuted: oklch(from var(--color-content) calc(l - 0.19) c h);
+  }
+}
+
+#root {
+  color: var(--color-contentMuted);
+  background-color: var(--color-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-content);
+}
