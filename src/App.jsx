@@ -1,16 +1,19 @@
+import { useState } from 'react';
 import { Outlet } from 'react-router';
 
 import { Footer } from './components/Footer/index.jsx';
-import { Header } from './components/Header/index.jsx';
+import { Navbar } from './components/Navbar/index.jsx';
 
 import './assets/App.css';
 
 export function App() {
+  const [purchases, setPurchases] = useState([]);
+
   return (
     <>
-      <Header />
+      <Navbar purchases={purchases.length} />
       <main>
-        <Outlet />
+        <Outlet context={[purchases, setPurchases]} />
       </main>
       <Footer />
     </>
