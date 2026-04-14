@@ -11,14 +11,7 @@ export function Card({ id, title, price, image }) {
   const handleQuantity = ({ target: { value } }) => setQuantity(value);
 
   function handlePurchase() {
-    const purchase = {
-      id,
-      title,
-      price,
-      quantity: Number(quantity),
-      image,
-    };
-
+    const purchase = { id, title, price, quantity: Number(quantity), image };
     setPurchases([...purchases, purchase]);
   }
 
@@ -29,8 +22,8 @@ export function Card({ id, title, price, image }) {
         price={price}
         image={image}
         quantity={quantity}
-        min={1}
         onChange={handleQuantity}
+        min={1}
       />
       <Button onClick={handlePurchase}>Add to cart</Button>
     </article>
