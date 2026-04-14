@@ -4,7 +4,7 @@ export function Item({ title, price, quantity, image }) {
       <img src={image} alt="" width={100} height={100} />
       <h3>{title}</h3>
       <p className="price">$ {price}</p>
-      <p className="quantity">{quantity}</p>
+      <p className="quantity">Purchased quantity: {quantity}</p>
     </li>
   );
 }
