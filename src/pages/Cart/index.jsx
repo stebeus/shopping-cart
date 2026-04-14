@@ -3,12 +3,11 @@ import { useOutletContext } from 'react-router';
 import { Item } from './Item.jsx';
 
 export function Cart() {
-  const [purchases, setPurchases] = useOutletContext();
+  const [purchases] = useOutletContext();
 
-  const createItem = ({ id, title, price, quantity, image }) => (
+  const createItem = ({ title, price, quantity, image }) => (
     <Item
-      key={id}
-      id={id}
+      key={crypto.randomUUID()}
       title={title}
       price={price}
       quantity={quantity}

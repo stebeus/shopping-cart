@@ -1,14 +1,10 @@
-import { ProductInfo } from '@/components/ProductInfo.jsx';
-
-export function Item({ id, title, price, quantity, image }) {
+export function Item({ title, price, quantity, image }) {
   return (
-    <li id={id} className="item">
-      <ProductInfo
-        title={title}
-        price={price}
-        image={image}
-        quantity={quantity}
-      />
+    <li className="item">
+      <img src={image} alt="" width={100} height={100} />
+      <h3>{title}</h3>
+      <p className="price">$ {price}</p>
+      <p className="quantity">{quantity}</p>
     </li>
   );
 }

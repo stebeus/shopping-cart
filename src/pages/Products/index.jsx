@@ -6,8 +6,8 @@ export function Products() {
   const apiUrl = 'https://fakestoreapi.com/products';
   const [products, isLoading, error] = useFetch(apiUrl);
 
-  const createProduct = ({ id, title, price, image }) => (
-    <Card key={id} id={id} title={title} price={price} image={image} />
+  const createProduct = ({ title, price, image }) => (
+    <Card key={crypto.randomUUID()} title={title} price={price} image={image} />
   );
 
   if (isLoading) return <p>Loading...</p>;
