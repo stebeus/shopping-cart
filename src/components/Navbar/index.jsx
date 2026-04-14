@@ -1,8 +1,8 @@
 import { Link, NavLink } from 'react-router';
 
-export function Header({ purchases }) {
+export function Navbar({ purchases }) {
   return (
-    <header>
+    <header className="navbar">
       <h1 className="logo">
         <Link to="/">Shopping Cart</Link>
       </h1>
