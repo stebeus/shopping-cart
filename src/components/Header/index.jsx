@@ -1,6 +1,4 @@
-import { Link } from 'react-router';
-
-import './index.css';
+import { Link, NavLink } from 'react-router';
 
 export function Header({ purchases }) {
   return (
@@ -11,13 +9,13 @@ export function Header({ purchases }) {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="products">Products</Link>
+            <NavLink to="products">Products</NavLink>
           </li>
           <li>
-            <Link to="cart">Cart ({purchases})</Link>
+            <NavLink to="cart">Cart {purchases}</NavLink>
           </li>
         </ul>
       </nav>
