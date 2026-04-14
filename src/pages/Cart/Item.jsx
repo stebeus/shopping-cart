@@ -7,8 +7,7 @@ export function Item({ id, title, price, quantity, image }) {
         title={title}
         price={price}
         image={image}
-        defaultQuantity={quantity}
-        min={0}
+        quantity={quantity}
       />
     </li>
   );
