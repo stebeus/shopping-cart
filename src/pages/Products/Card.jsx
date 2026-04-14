@@ -29,8 +29,8 @@ export function Card({ title, price, image }) {
         price={price}
         quantity={quantity}
         image={image}
-        onChange={handleQuantity}
         min={1}
+        onChange={handleQuantity}
       />
       <Button onClick={handlePurchase}>Add to cart</Button>
     </article>
