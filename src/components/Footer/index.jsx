@@ -13,7 +13,7 @@ export function Footer() {
         </ExternalLink>
       </p>
       <ExternalLink to="https://github.com/stebeus">
-        <SvgIcon id="github" alt="GitHub" />
+        <SvgIcon id="github" title="GitHub" />
       </ExternalLink>
     </footer>
   );
