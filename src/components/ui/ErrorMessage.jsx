@@ -1,4 +1,4 @@
-export function ErrorMessage({ title = 'Error!', description }) {
+export function ErrorMessage({ title = 'Error', description }) {
   return (
     <>
       <h2>{title}</h2>
