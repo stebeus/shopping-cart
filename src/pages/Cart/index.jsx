@@ -1,6 +1,10 @@
+import { useOutletContext } from 'react-router';
+
 import { Item } from './Item.jsx';
 
-export function Cart({ purchases }) {
+export function Cart() {
+  const [purchases, setPurchases] = useOutletContext();
+
   const createItem = ({ id, title, price, quantity, image }) => (
     <Item
       key={id}
