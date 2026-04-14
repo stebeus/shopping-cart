@@ -3,11 +3,11 @@ import { useFetch } from '@/hooks/useFetch.js';
 import { Card } from './Card.jsx';
 
 export function Products() {
-  const api = 'https://fakestoreapi.com/products';
-  const [products, isLoading, error] = useFetch(api);
+  const apiUrl = 'https://fakestoreapi.com/products';
+  const [products, isLoading, error] = useFetch(apiUrl);
 
-  const createCard = ({ id, title, price, image }) => (
-    <Card key={id} title={title} price={price} imgUrl={image} />
+  const createProduct = ({ id, title, price, image }) => (
+    <Card key={id} id={id} title={title} price={price} image={image} />
   );
 
   if (isLoading) return <p>Loading...</p>;
@@ -16,7 +16,7 @@ export function Products() {
   return (
     <>
       <h2>Products</h2>
-      <div className="grid">{products.map(createCard)}</div>
+      <div className="grid">{products.map(createProduct)}</div>
     </>
   );
 }

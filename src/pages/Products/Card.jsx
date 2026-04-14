@@ -1,12 +1,16 @@
 import { Button } from '@/components/ui/Button.jsx';
-import { ProductInfo } from '@/components/ui/ProductInfo.jsx';
+import { Field } from '@/components/ui/Field.jsx';
 
-export function Card({ title, price, imgUrl }) {
+export function Card({ id, title, price, image }) {
+  function handlePurchase() {}
+
   return (
-    <article className="card">
-      <img src={imgUrl} alt="" width={160} height={160} />
-      <ProductInfo title={title} price={price} min={1} />
-      <Button>Add to cart</Button>
+    <article id={id} className="card">
+      <img src={image} alt="" width={100} height={100} />
+      <h3>{title}</h3>
+      <p className="price">$ {price}</p>
+      <Field label="Quantity" type="number" defaultValue={1} min={1} />
+      <Button onClick={handlePurchase}>Add to cart</Button>
     </article>
   );
 }
