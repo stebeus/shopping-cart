@@ -1,12 +1,15 @@
-import { ProductInfo } from '@/components/ui/ProductInfo.jsx';
+import { ProductInfo } from '@/components/ProductInfo.jsx';
 
-export function Item({ title, price, quantity, imgUrl }) {
+export function Item({ id, title, price, quantity, image }) {
   return (
-    <li className="item">
-      <img src={imgUrl} alt="" width={64} height={64} />
-      <div className="info">
-        <ProductInfo title={title} price={price} defaultQuantity={quantity} />
-      </div>
+    <li id={id} className="item">
+      <ProductInfo
+        title={title}
+        price={price}
+        image={image}
+        defaultQuantity={quantity}
+        min={0}
+      />
     </li>
   );
 }

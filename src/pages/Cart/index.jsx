@@ -1,20 +1,21 @@
 import { Item } from './Item.jsx';
 
-export function Cart({ items }) {
+export function Cart({ purchases }) {
   const createItem = ({ id, title, price, quantity, image }) => (
     <Item
       key={id}
+      id={id}
       title={title}
       price={price}
       quantity={quantity}
-      imgUrl={image}
+      image={image}
     />
   );
 
   return (
     <>
       <h2>Cart</h2>
-      <ul className="products">{items.map(createItem)}</ul>
+      <ul className="items">{purchases.map(createItem)}</ul>
     </>
   );
 }
