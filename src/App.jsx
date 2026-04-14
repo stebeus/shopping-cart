@@ -6,14 +6,14 @@ import { Navbar } from './components/Navbar/index.jsx';
 
 import './assets/App.css';
 
+const sumPurchases = (accumulator, { quantity }) => accumulator + quantity;
+
 export function App() {
   const [purchases, setPurchases] = useState([]);
 
-  const sumTotal = (accumulator, { quantity }) => accumulator + quantity;
-
   return (
     <>
-      <Navbar purchases={purchases.reduce(sumTotal, 0)} />
+      <Navbar purchases={purchases.reduce(sumPurchases, 0)} />
       <main>
         <Outlet context={[purchases, setPurchases]} />
       </main>
