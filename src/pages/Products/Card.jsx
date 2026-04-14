@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useOutletContext } from 'react-router';
 
 import { Button } from '@/components/ui/Button.jsx';
+import { Field } from '@/components/ui/Field.jsx';
 
 export function Card({ title, price, image }) {
   const [quantity, setQuantity] = useState(1);
