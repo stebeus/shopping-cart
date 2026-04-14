@@ -1,3 +1,5 @@
+import { Field } from './ui/Field.jsx';
+
 export function ProductInfo({
   title,
   price,
