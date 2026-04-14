@@ -9,9 +9,11 @@ import './assets/App.css';
 export function App() {
   const [purchases, setPurchases] = useState([]);
 
+  const sumTotal = (accumulator, { quantity }) => accumulator + quantity;
+
   return (
     <>
-      <Navbar purchases={purchases.length} />
+      <Navbar purchases={purchases.reduce(sumTotal, 0)} />
       <main>
         <Outlet context={[purchases, setPurchases]} />
       </main>
