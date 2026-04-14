@@ -1,7 +1,7 @@
-export function SvgIcon({ id, alt }) {
+export function SvgIcon({ id, title }) {
   return (
-    <svg className="icon" width="24" height="24">
-      <title>{alt}</title>
+    <svg className="svgIcon" width={24} height={24}>
+      <title>{title}</title>
       <use href={`icons.svg#${id}`}></use>
     </svg>
   );
