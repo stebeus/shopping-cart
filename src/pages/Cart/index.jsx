@@ -5,9 +5,10 @@ import { Item } from './Item.jsx';
 export function Cart() {
   const [purchases] = useOutletContext();
 
-  const createItem = ({ title, price, quantity, image }) => (
+  const createItem = ({ id, title, price, quantity, image }) => (
     <Item
-      key={crypto.randomUUID()}
+      key={id}
+      id={id}
       title={title}
       price={price}
       quantity={quantity}

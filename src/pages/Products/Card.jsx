@@ -11,7 +11,14 @@ export function Card({ title, price, image }) {
   const handleQuantity = ({ target: { value } }) => setQuantity(value);
 
   function handlePurchase() {
-    const purchase = { title, price, quantity: Number(quantity), image };
+    const purchase = {
+      id: crypto.randomUUID(),
+      title,
+      price,
+      quantity: Number(quantity),
+      image,
+    };
+
     setPurchases([...purchases, purchase]);
   }
 
