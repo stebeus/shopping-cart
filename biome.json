@@ -8,13 +8,24 @@
   "files": {
     "ignoreUnknown": false
   },
+  "overrides": [
+    {
+      "includes": ["**/*.config.*"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    }
+  ],
   "formatter": {
     "enabled": true,
     "indentStyle": "space"
   },
   "linter": {
     "enabled": true,
-    "includes": ["**", "!*.config.*"],
     "rules": {
       "recommended": true,
       "correctness": {
