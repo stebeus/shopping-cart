@@ -54,10 +54,9 @@
       }
     }
   },
-  "html": {
-    "experimentalFullSupportEnabled": true,
+  "javascript": {
     "formatter": {
-      "enabled": true
+      "quoteStyle": "single"
     }
   },
   "css": {
@@ -65,9 +64,10 @@
       "quoteStyle": "single"
     }
   },
-  "javascript": {
+  "html": {
+    "experimentalFullSupportEnabled": true,
     "formatter": {
-      "quoteStyle": "single"
+      "enabled": true
     }
   },
   "assist": {
