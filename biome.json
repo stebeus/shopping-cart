@@ -44,7 +44,12 @@
             ]
           }
         },
-        "useFilenamingConvention": "on",
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "filenameCases": ["export", "kebab-case"]
+          }
+        },
         "useNamingConvention": "on"
       }
     }
