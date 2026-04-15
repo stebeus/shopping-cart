@@ -1,7 +1,5 @@
 import { ExternalLink } from '@/components/ui/ExternalLink.jsx';
-import { SvgIcon } from '@/components/ui/SvgIcon.jsx';
-
-import './index.css';
+import { Icon } from '@/components/ui/Icon.jsx';
 
 export function Footer() {
   return (
@@ -13,7 +11,7 @@ export function Footer() {
         </ExternalLink>
       </p>
       <ExternalLink to="https://github.com/stebeus">
-        <SvgIcon id="github" title="GitHub" />
+        <Icon id="github" title="GitHub" />
       </ExternalLink>
     </footer>
   );
