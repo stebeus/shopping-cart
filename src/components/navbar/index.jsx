@@ -5,7 +5,7 @@ import './index.css';
 export function Navbar({ purchases }) {
   return (
     <header className="navbar">
-      <h1 className="logo">
+      <h1 className="logo" title="Homepage">
         <Link to="/">🛍️ Shopping Cart</Link>
       </h1>
       <nav>
