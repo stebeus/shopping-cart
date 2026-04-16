@@ -12,10 +12,10 @@ export function Navbar({ purchases }) {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="products">Products</NavLink>
+            <NavLink to="/products">Products</NavLink>
           </li>
           <li>
-            <NavLink to="cart">🛒 Cart ({purchases})</NavLink>
+            <NavLink to="/cart">🛒 Cart ({purchases})</NavLink>
           </li>
         </ul>
       </nav>
