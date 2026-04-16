@@ -1,4 +1,23 @@
 @scope (footer) {
   :scope {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-xs);
+    background-color: var(--color-base);
+    border-top: var(--border);
+  }
+
+  a:has(.icon) {
+    transition: transform 750ms ease;
+
+    &:hover {
+      transform: rotate(1turn);
+    }
+  }
+
+  .copyright::after {
+    margin: var(--space-sm);
+    content: '';
+    border-left: var(--border);
   }
 }
