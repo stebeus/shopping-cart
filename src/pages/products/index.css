@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-xl);
+}
+
+@scope (.card) {
+  :scope {
+    padding: var(--space-xl) var(--space-xxl);
+    border: var(--border);
+  }
+
+  .img-wrapper {
+    display: flex;
+    flex-basis: 15rem;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl);
+    border: var(--border);
+  }
+
+  img {
+    width: 90%;
+  }
+}

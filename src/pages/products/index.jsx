@@ -1,9 +1,11 @@
 import { ErrorFallback } from '@/components/ui/ErrorFallback.jsx';
-import { Loader } from '@/components/ui/Loader.jsx';
+import { Loader } from '@/components/ui/loader/index.jsx';
 
 import { useFetch } from '@/hooks/use-fetch.js';
 
 import { Card } from './Card.jsx';
+
+import './index.css';
 
 export function Products() {
   const apiUrl = 'https://fakestoreapi.com/products';
@@ -17,9 +19,9 @@ export function Products() {
   if (error) return <ErrorFallback message={error} />;
 
   return (
-    <>
+    <main id="products">
       <h2>Products</h2>
       <div className="grid">{products.map(createProduct)}</div>
-    </>
+    </main>
   );
 }

@@ -55,6 +55,7 @@ textarea {
 
 button,
 input:is([type='checkbox'], [type='radio']),
+label,
 select {
   cursor: pointer;
 }

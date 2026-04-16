@@ -1,8 +1,9 @@
+import { Plus } from 'lucide-react';
 import { useState } from 'react';
 import { useOutletContext } from 'react-router';
 
 import { ProductData } from '@/components/ProductData.jsx';
-import { Button } from '@/components/ui/Button.jsx';
+import { Button } from '@/components/ui/button/index.jsx';
 
 export function Card({ title, price, image }) {
   const [quantity, setQuantity] = useState(1);
@@ -32,7 +33,10 @@ export function Card({ title, price, image }) {
         min={1}
         onChange={handleQuantity}
       />
-      <Button onClick={handlePurchase}>Add to cart</Button>
+      <Button onClick={handlePurchase}>
+        <Plus />
+        Add to cart
+      </Button>
     </article>
   );
 }

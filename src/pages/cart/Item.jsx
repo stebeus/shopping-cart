@@ -1,8 +1,9 @@
+import { X } from 'lucide-react';
 import { useState } from 'react';
 import { useOutletContext } from 'react-router';
 
 import { ProductData } from '@/components/ProductData.jsx';
-import { Button } from '@/components/ui/Button.jsx';
+import { Button } from '@/components/ui/button/index.jsx';
 
 export function Item({ id, title, price, quantity, image }) {
   const [newQuantity, setNewQuantity] = useState(quantity);
@@ -48,7 +49,10 @@ export function Item({ id, title, price, quantity, image }) {
         image={image}
         onChange={handleQuantity}
       />
-      <Button onClick={handleRemove}>Remove</Button>
+      <Button onClick={handleRemove}>
+        <X />
+        Remove
+      </Button>
     </li>
   );
 }

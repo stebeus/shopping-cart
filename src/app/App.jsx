@@ -14,9 +14,7 @@ export function App() {
   return (
     <>
       <Navbar purchases={purchases.reduce(sumPurchases, 0)} />
-      <main>
-        <Outlet context={[purchases, setPurchases]} />
-      </main>
+      <Outlet context={[purchases, setPurchases]} />
       <Footer />
     </>
   );

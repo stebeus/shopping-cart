@@ -1,3 +1,5 @@
+import './index.css';
+
 export function Field({ label, ...props }) {
   return (
     <label className="field">

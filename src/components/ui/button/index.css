@@ -1,0 +1,14 @@
+button {
+  display: flex;
+  gap: var(--space-xxs);
+  justify-content: center;
+  padding: var(--space-xxs) var(--space-sm);
+
+  color: var(--color-base);
+  background-color: var(--color-content);
+  border: none;
+}
+
+button {
+  font-weight: 200;
+}

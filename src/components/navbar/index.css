@@ -1,4 +1,29 @@
 @scope (.navbar) {
   :scope {
+    --color-baseTransparent: oklch(from var(--color-base) l c h / 0.95);
+
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--color-baseTransparent);
+    border-bottom: var(--border);
+    backdrop-filter: blur(10px);
+  }
+
+  ul {
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+  }
+
+  .logo {
+    font-size: 1.375rem;
+    font-weight: 800;
+    font-feature-settings: 'cv11';
+    text-transform: lowercase;
+    letter-spacing: 0.0625rem;
   }
 }

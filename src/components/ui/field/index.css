@@ -1,0 +1,14 @@
+@scope (.field) {
+  :scope {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+  }
+
+  input {
+    width: 100%;
+    padding: var(--space-xxs) var(--space-xs);
+    background-color: var(--color-base);
+    border: var(--border);
+  }
+}
