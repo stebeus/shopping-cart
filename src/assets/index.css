@@ -1,3 +1,21 @@
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('@/assets/fonts/InterVariable.woff2');
+  font-feature-settings: 'cv01', 'cv05', 'cv07';
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('@/assets/fonts/InterVariable-Italic.woff2');
+  font-feature-settings: 'cv01', 'cv05', 'cv07';
+}
+
 :root {
   /* Borders */
   --border: 1px solid var(--color-border);
