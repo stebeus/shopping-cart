@@ -12,7 +12,7 @@ export function useFetch(url) {
         const data = await response.json();
 
         if (!response.ok) {
-          throw new Error(`HTTP error: Status ${response.status}`);
+          throw new Error(`HTTP Error: Status ${response.status}`);
         }
 
         setData(data);
