@@ -1,6 +1,15 @@
-import { useOutletContext } from 'react-router';
+import { NavLink, useOutletContext } from 'react-router';
 
 import { Item } from './Item.jsx';
+
+function EmptyCard() {
+  return (
+    <>
+      <p>Your cart is empty</p>
+      <NavLink to="/products">Purchase products</NavLink>
+    </>
+  );
+}
 
 export function Cart() {
   const [purchases] = useOutletContext();
@@ -19,7 +28,9 @@ export function Cart() {
   return (
     <>
       <h2>Cart</h2>
-      <ul className="items">{purchases.map(createItem)}</ul>
+      <ul className="items">
+        {purchases.length === 0 ? <EmptyCard /> : purchases.map(createItem)}
+      </ul>
     </>
   );
 }
