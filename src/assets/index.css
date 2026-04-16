@@ -54,3 +54,12 @@ h5,
 h6 {
   color: var(--color-content);
 }
+
+a {
+  color: currentColor;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-content);
+  }
+}
