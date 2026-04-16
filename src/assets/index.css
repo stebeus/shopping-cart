@@ -1,9 +1,12 @@
 :root {
+  /* Borders */
+  --border: 1px solid var(--color-border);
+
   /* Colors */
   --color-base: oklch(1 0 0);
-  --color-baseSecondary: oklch(from var(--color-base) calc(l - 0.04) c h);
-  --color-content: oklch(0.16 0 0);
-  --color-contentMuted: oklch(from var(--color-content) calc(l + 0.26) c h);
+  --color-border: oklch(0 0 0 / 0.1);
+  --color-content: oklch(0.15 0 0);
+  --color-contentMuted: oklch(from var(--color-content) calc(l + 0.25) c h);
 
   /* Spacing */
   --space-xxs: 0.25rem;
@@ -13,6 +16,13 @@
   --space-lg: 1.25rem;
   --space-xl: 1.5rem;
   --space-xxl: 2rem;
+
+  /* Typography */
+  --ff: Inter, system-ui, sans-serif;
+  --fs-md: 1rem;
+  --fs-lg: 1.75rem;
+  --fw-regular: 400;
+  --font-body: var(--fw-regular) var(--fs-md) var(--ff);
 
   color-scheme: light dark;
 }
