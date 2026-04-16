@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router';
 
-import { Footer } from './components/Footer/index.jsx';
-import { Navbar } from './components/Navbar/index.jsx';
+import { Footer } from '@/components/footer/index.jsx';
+import { Navbar } from '@/components/navbar/index.jsx';
 
-import './assets/App.css';
+import './App.css';
 
 const sumPurchases = (accumulator, { quantity }) => accumulator + quantity;
 
