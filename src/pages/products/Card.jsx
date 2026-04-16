@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useOutletContext } from 'react-router';
 
-import { ProductInfo } from '@/components/ProductInfo.jsx';
+import { ProductData } from '@/components/ProductData.jsx';
 import { Button } from '@/components/ui/Button.jsx';
 
 export function Card({ title, price, image }) {
@@ -24,7 +24,7 @@ export function Card({ title, price, image }) {
 
   return (
     <article className="card">
-      <ProductInfo
+      <ProductData
         title={title}
         price={price}
         quantity={quantity}
