@@ -13,6 +13,8 @@
   --space-lg: 1.25rem;
   --space-xl: 1.5rem;
   --space-xxl: 2rem;
+
+  color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
