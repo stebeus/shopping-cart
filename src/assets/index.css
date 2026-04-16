@@ -24,6 +24,11 @@
 }
 
 #root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0 1fr);
+  min-height: 100dvh;
+  font: var(--font-body);
   color: var(--color-contentMuted);
   background-color: var(--color-base);
 }
