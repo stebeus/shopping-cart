@@ -1,5 +1,7 @@
 import { Link, NavLink } from 'react-router';
 
+import './index.css';
+
 export function Navbar({ purchases }) {
   return (
     <header className="navbar">

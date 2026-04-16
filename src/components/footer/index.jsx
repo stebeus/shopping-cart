@@ -1,6 +1,8 @@
 import { ExternalLink } from '@/components/ui/ExternalLink.jsx';
 import { Icon } from '@/components/ui/Icon.jsx';
 
+import './index.css';
+
 export function Footer() {
   return (
     <footer>
